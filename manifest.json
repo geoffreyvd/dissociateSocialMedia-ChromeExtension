@@ -1,0 +1,20 @@
+{
+    "name": "Dissociate from Social Media",
+    "version": "0.0.1",
+    "description": "A chrome extension that helps to distantiate yourself from social media by blocking it for a random day range that increases over time",
+    "permissions": ["storage"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },"content_scripts": [
+      {
+        "matches": ["http://*.facebook.com/*","https://*.facebook.com/*"],
+        "run_at": "document_start",
+        "js": ["contentScript.js"]
+      }
+    ],
+    "web_accessible_resources": [
+       "index.html"
+    ],
+    "manifest_version": 2
+}
