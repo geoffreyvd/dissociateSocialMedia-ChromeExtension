@@ -25,6 +25,7 @@ chrome.storage.sync.get('config', function(data) {
     // var opened = window.open("");
     // opened.document.write("<html><head><title>MyTitle</title></head><body>test</body></html>");
   }
+  //easier way to possible over write pagewith new, TODO:
   //window.location.replace(config.blockUntill);
   //care when redirecting to a mathicng site(facebook.com for instance) there will be a loop
 });
