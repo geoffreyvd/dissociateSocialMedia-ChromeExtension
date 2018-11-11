@@ -5,11 +5,13 @@
 'use strict';
 
 chrome.runtime.onInstalled.addListener(function() {
+  console.log("background script.");
   var config = {
     minimumDays : 4,
     rangeDays: 2,
     setDay: + new Date(),
-    maximumMinutes: 10
+    maximumMinutes: 10,
+    count: 0
   }
   var randomDays = Math.floor((Math.random() * config.rangeDays) + config.minimumDays);
 
